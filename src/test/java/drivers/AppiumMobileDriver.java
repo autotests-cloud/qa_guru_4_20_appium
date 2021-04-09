@@ -17,8 +17,11 @@ public class AppiumMobileDriver implements WebDriverProvider {
     public WebDriver createDriver(DesiredCapabilities capabilities) {
         capabilities.setCapability("automationName", "Appium");
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName", "emulator-5554");
+        capabilities.setCapability("deviceName", "RF8N71SMG0H");
         capabilities.setCapability("version", "11.0");
+        capabilities.setCapability("locale", "en");
+        capabilities.setCapability("language", "en");
+
         capabilities.setCapability("appPackage", "org.wikipedia.alpha");
         capabilities.setCapability("appActivity", "org.wikipedia.main.MainActivity");
         capabilities.setCapability("app", getAbsolutePath("src/test/resources/apps/app-alpha-universal-release.apk"));
